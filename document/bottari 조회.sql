@@ -12,11 +12,21 @@ select  user_no,
         email,
         phone,
         birth,
-        date_format(Join_date,'%Y-%m-%d') as Join_date
+        date_format(Join_date,'%Y-%m-%d %W') as Join_date
 from users
 ;
 
--- date_format(hire_date,'%Y-%m') as hire_date
+select  user_no,
+		id,
+        name,
+        password,
+        email,
+        phone,
+        birth,
+        date_format(Join_date,'%Y년 %m월 %d일 %a요일') as Join_date
+from users
+;
+
 
 -- 특정 user_no 삭제
 DELETE FROM users 
@@ -25,6 +35,7 @@ WHERE user_no = 40
 
 -- 1) 현재시간 및 Timezone 확인 방법
 select now(), @@system_time_zone as Timezone;
+-- UTC 시간에서 한국 시간을 + 9시간 더해주면 한국시간이 됨 //2025-08-28 15:26:48
 
 -- 2) Timezone 시간 변경하는 방법
 set global time_zone = '+9:00';
