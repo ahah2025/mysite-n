@@ -16,6 +16,9 @@ select  user_no,
 from users
 ;
 
+select * from users
+;
+
 select  user_no,
 		id,
         name,
@@ -58,6 +61,7 @@ select * from cart_option
 
 select * from category
 ;
+
 
 select * from detail_image
 ;
