@@ -26,10 +26,23 @@ select  user_no,
         email,
         phone,
         birth,
-        date_format(Join_date,'%Y년 %m월 %d일 %a요일') as Join_date
+        date_format(Join_date,'%y년 %m월 %d일 %a요일') as Join_date
 from users
 ;
 
+select  user_no,
+		id,
+        name,
+        date_format(Join_date,'%Y %M %d') as Join_date
+from users
+;
+
+-- %Y : 4자리 년도 (ex:2025) 
+-- %y : (소문자)2자리 년도(ex:25)
+-- %M : 긴 월(영문)
+-- %b : 짧은 월(영문)
+-- %W : 긴 요일 이름(영문)
+-- %a : 짧은 요일 이름(영문) 
 
 -- 특정 user_no 삭제
 DELETE FROM users 
