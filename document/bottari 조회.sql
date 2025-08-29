@@ -33,7 +33,7 @@ from users
 select  user_no,
 		id,
         name,
-        date_format(Join_date,'%Y %M %d') as Join_date
+        date_format(now(),'%Y년 %m월 %d일 %H시 %분 %S초') as Join_date
 from users
 ;
 
