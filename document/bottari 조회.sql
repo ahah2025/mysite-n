@@ -46,7 +46,7 @@ from users
 
 -- 특정 user_no 삭제
 DELETE FROM users 
-WHERE user_no = 40
+WHERE user_no = 43
 ;
 
 -- 1) 현재시간 및 Timezone 확인 방법
