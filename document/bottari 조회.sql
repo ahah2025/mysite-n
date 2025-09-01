@@ -65,8 +65,21 @@ select now(), @@system_time_zone as Timezone;
 select * from calender
 ;
 
+-- 장바구니 조회
 select * from cart
 ;
+
+-- 유저, 장바구니 같이 조회
+select  c.cart_no,
+		c.user_no,
+        u.name,
+        c.category_no,
+        c.quantity,
+        u.user_no,
+        u.id
+from cart c, users u
+;
+
 
 -- 장바구니옵션
 select * from cart_option
