@@ -4,6 +4,29 @@ use bottari_db;
 -- 테이블 목록 조회
 show tables;
 
+select *
+from category;
+
+select * from product;
+
+-- 카테고리 1 : 결혼 / 2:생일
+-- 상품 수정
+update product
+set  title = '더 라운지 Le Gouter SIGNIEL 애프터눈티 세트 2인', 
+     price = 160000,
+     brand = 'SIGNIEL', 
+     itemimg = 'C:\\JavaStudy\\upload\\LeGouterSIGNIEL2in.jpg',
+     shipping_yn = 'y',
+     shipping_cost = '5000',
+     zipcode = '05329',
+     address = '서울시 강동구 천호대로 1027' ,
+     detail_address = '5층',
+     category_no = 1
+where product_no = 65
+;
+
+-- 카테고리 1 : 결혼 / 2:생일
+
 -- 사용자 테이블 조회 
 select  user_no,
 		id,
