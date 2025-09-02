@@ -9,23 +9,40 @@ from category;
 
 select * from product;
 
--- 카테고리 1 : 결혼 / 2:생일
+-- 카테고리 1:결혼 / 2:생일 / 3:돌잔치
 -- 상품 수정
 update product
-set  title = '더 라운지 Le Gouter SIGNIEL 애프터눈티 세트 2인', 
-     price = 160000,
-     brand = 'SIGNIEL', 
-     itemimg = 'C:\\JavaStudy\\upload\\LeGouterSIGNIEL2in.jpg',
+set  title = '조말론런던 코롱 50ML', 
+     price = 168000,
+     brand = 'MAC(맥)', 
+     itemimg = 'C:\\JavaStudy\\upload\\JoMalonePerfumeMain.jpg',
      shipping_yn = 'y',
      shipping_cost = '5000',
      zipcode = '05329',
      address = '서울시 강동구 천호대로 1027' ,
      detail_address = '5층',
-     category_no = 1
-where product_no = 65
+     category_no = 2
+where product_no = 8
 ;
+-- 87, 82
+
 
 -- 카테고리 1 : 결혼 / 2:생일
+-- 배송비 X  -- 픽업상품(와인)
+update product
+set  title = '헌드레드에이커레이스카베르네소비뇽', 
+     price = 1600000,
+     brand = '와인25플러스', 
+     itemimg = 'C:\\JavaStudy\\upload\\HundredAcreRaceCabernetSauvignonMain.jpg',
+     shipping_yn = 'n',
+     shipping_cost = '0',
+     zipcode = '0',
+     address = '0' ,
+     detail_address = '0',
+     category_no = 1
+where product_no = 86
+;
+
 
 -- 사용자 테이블 조회 
 select  user_no,
@@ -68,8 +85,8 @@ from users
 -- %a : 짧은 요일 이름(영문) 
 
 -- 특정 user_no 삭제
-DELETE FROM users 
-WHERE user_no = 43
+DELETE FROM product 
+WHERE product_no = 82
 ;
 
 -- 1) 현재시간 및 Timezone 확인 방법
