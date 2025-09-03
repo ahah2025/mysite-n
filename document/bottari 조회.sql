@@ -6,16 +6,29 @@ show tables;
 
 select *
 from category;
-
+select * from detail_image;
 select * from product;
+select * from funding_option;
+select * from funding_product;
+
+select * from product
+where product_no = 150
+;
+
 
 -- 특정 번호 삭제
 DELETE FROM product 
-WHERE product_no = 66
+WHERE product_no = 79
 ;
 
 -- 카테고리 1:결혼 / 2:생일 / 3:돌잔치
 -- 상품 수정
+update product
+set  title = '미나 L사이즈 블루투스 스피커 결혼, 집들이 선물 버섯조명 감성 무드등 미니조명', 
+     category_no = 4
+where product_no = 202
+;
+
 update product
 set  title = '조말론런던 코롱 50ML', 
      price = 168000,
@@ -27,7 +40,7 @@ set  title = '조말론런던 코롱 50ML',
      address = '서울시 강동구 천호대로 1027' ,
      detail_address = '5층',
      category_no = 2
-where product_no = 8
+where product_no = 202
 ;
 
 -- 카테고리 1 : 결혼 / 2:생일
