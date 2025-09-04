@@ -4,15 +4,34 @@ use bottari_db;
 -- 테이블 목록 조회
 show tables;
 
-select *
-from category;
+select * from calender;
+select * from cart;
+select * from cart_option;
+select * from category;
 select * from detail_image;
-select * from product;
 select * from funding_option;
 select * from funding_product;
+select * from invitation;
+select * from option_detail;
+select * from payment;
+select * from payment_goods;
+select * from payment_goods_option; 
+select * from product;
+select * from product_option;
+select * from theme;
+select * from users;
+select * from wishlist;
+select * from wishlist_option;
 
+
+-- 특정 번호 조회
 select * from product
-where product_no = 150
+where product_no = 231
+;
+
+-- 특정 보랜드 조회
+select * from product
+where brand = '와인25플러스'
 ;
 
 
@@ -24,9 +43,9 @@ WHERE product_no = 79
 -- 카테고리 1:결혼 / 2:생일 / 3:돌잔치
 -- 상품 수정
 update product
-set  title = '미나 L사이즈 블루투스 스피커 결혼, 집들이 선물 버섯조명 감성 무드등 미니조명', 
-     category_no = 4
-where product_no = 202
+set  title = '와인 헌드레드에이커레이스카베르네소비뇽(만 19세 미만 구매금지)', 
+     category_no = 1
+where product_no = 148
 ;
 
 update product
@@ -57,8 +76,7 @@ select  user_no,
 from users
 ;
 
-select * from users
-;
+
 
 select  user_no,
 		id,
